@@ -2207,7 +2207,6 @@ GameObject:
   - component: {fileID: 284874706}
   - component: {fileID: 284874705}
   - component: {fileID: 284874708}
-  - component: {fileID: 284874709}
   m_Layer: 7
   m_Name: PlayerFPS
   m_TagString: Player
@@ -2285,20 +2284,6 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   healthBar: {fileID: 269837217}
---- !u!64 &284874709
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284874704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!4 &298338318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9162966512111866043, guid: b166b712d873b26459cbc94f94d473b6, type: 3}
