@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public float health = 100f;
     public Slider healthBar; // Asigna una barra en UI
 
+    private bool isDead = false;
+
     void Start()
     {
         health = Mathf.Clamp(health, 0f, maxHealth);
@@ -24,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        if (isDead) return; // No recibir daño si ya está muerto
+
         health = Mathf.Clamp(health - amount, 0f, maxHealth);
         Debug.Log("Player Health: " + health);
         if (healthBar != null)
@@ -36,8 +40,25 @@ public class PlayerHealth : MonoBehaviour
         }
         if (health <= 0f)
         {
-            Debug.Log("PLAYER DEAD");
-            // Aquí puedes recargar escena, mostrar pantalla de muerte, etc.
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        if (isDead) return; // Evitar llamar Die() múltiples veces
+
+        isDead = true;
+        Debug.Log("💀 PLAYER DEAD");
+
+        // Activar Game Over si existe el manager
+        if (GameOverManager.Instance != null)
+        {
+            GameOverManager.Instance.ShowGameOver();
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ GameOverManager no encontrado en la escena. Asegúrate de tener un GameObject con el script GameOverManager.");
         }
     }
 

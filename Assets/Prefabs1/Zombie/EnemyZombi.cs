@@ -210,24 +210,33 @@ public class EnemyZombi : MonoBehaviour
     }
 
     private void Die()
+{
+    if (isDead) return;
+    isDead = true;
+
+    anim?.SetTrigger("Die");
+
+    if (deathClip != null)
+        audioSource.PlayOneShot(deathClip);
+
+    if (agent != null && agent.enabled)
+        agent.isStopped = true;
+
+    var col = GetComponent<Collider>();
+    if (col != null) col.enabled = false;
+
+    if (enemyHealthSlider != null)
+        enemyHealthSlider.value = 0;
+
+    // ---- SUMAR PUNTOS ----
+    if (ScoreManager.Instance != null)
     {
-        if (isDead) return;
-        isDead = true;
-
-        anim?.SetTrigger("Die");
-
-        if (deathClip != null)
-            audioSource.PlayOneShot(deathClip);
-
-        if (agent != null && agent.enabled)
-            agent.isStopped = true;
-
-        var col = GetComponent<Collider>();
-        if (col != null) col.enabled = false;
-
-        if (enemyHealthSlider != null)
-            enemyHealthSlider.value = 0;
-
-        Destroy(gameObject, 5f);
+        ScoreManager.Instance.AddScore(10);  // suma 10 puntos por cada muerte
     }
+
+    // ---- DESTRUIR ZOMBI ----
+    Destroy(gameObject, 5f);
+}
+
+    
 }
