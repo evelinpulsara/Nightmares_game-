@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: 2709ee50bca8240b39cfb91ce50fb119
-  - enabled: 1
+  - enabled: 0
     path: Assets/CamiZombie/Prefabs1/Scenes/World_2_Asylum.unity
     guid: 22ae79e6dbf39274499b454086a36062
+  - enabled: 1
+    path: Assets/Jesus/Jesus_SampleScene.unity
+    guid: 802c66fd027ce48fcbca3cf8fea8d328
   m_configObjects: {}

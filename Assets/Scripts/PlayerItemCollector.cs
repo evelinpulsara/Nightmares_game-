@@ -48,4 +48,4 @@ public class PlayerItemCollector : MonoBehaviour
     {
         uiText.text = collected + "/" + required;
     }
-}
+} 

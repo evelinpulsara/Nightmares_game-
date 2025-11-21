@@ -34,6 +34,6 @@ public class GameManager : MonoBehaviour
     System.Collections.IEnumerator CargarEscenaAsilo()
     {
         yield return new WaitForSeconds(2f); // ⏳ 2 segundos
-        SceneManager.LoadScene("World_2_Asylum"); // 🚪 escena de Camila
+        SceneManager.LoadScene("Jesus_SampleScene"); // 🚪 escena de Camila
     }
 }
