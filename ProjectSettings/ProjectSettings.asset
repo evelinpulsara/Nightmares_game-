@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 24
-  productGUID: f8bccedfcc45b48298eba357dac74d26
+  productGUID: 71a1092c9ca1837488e6a87b8a408a0d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: FINAL
+  productName: final_juego
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -275,7 +275,7 @@ PlayerSettings:
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
-    m_StaticBatching: 1
+    m_StaticBatching: 0
     m_DynamicBatching: 0
   - m_BuildTarget: tvOS
     m_StaticBatching: 1
@@ -335,6 +335,9 @@ PlayerSettings:
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
     m_Automatic: 1
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 02000000
+    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 0
@@ -721,11 +724,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1e3c4333-cdd0-4097-b143-c3867ebd32e5
+  cloudProjectId: 3575859d-1a34-49c7-9c0f-bc293a9f94ae
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: FINAL
-  organizationId: justevie
+  projectName: final_juego
+  organizationId: jesus_vilarte
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

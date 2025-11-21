@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Zombie
-  - Objeto
-  - item
-  - Bullet
+  - PW
+  - SW
+  - Run Forward
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,11 +15,11 @@ TagManager:
   - 
   - Water
   - UI
-  - ground
-  - props
-  - enemy
-  - player
-  - ItemLayer
+  - Item
+  - Hitbox
+  - Enemy
+  - 
+  - 
   - 
   - 
   - 
